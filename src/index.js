@@ -11,8 +11,8 @@ const countryInfo = document.querySelector('.country-info')
 countryInput.addEventListener('input', debounce(onCountryInput, DEBOUNCE_DELAY))
 
 function onCountryInput() {
-  const name = countryInput.value.trim()
-  if (name === '') {
+  const name = countryInput.value
+  if (name === 0) {
     return (countryList.innerHTML = ''), (countryInfo.innerHTML = '')
   }
 
